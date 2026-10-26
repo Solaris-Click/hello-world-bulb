@@ -1,0 +1,32 @@
+html>
+	<head>
+		<title>My First Page</title>
+	</head>
+	<body>
+		<h1 align="center" style="color:PaleVioletRed; font-size:80px;"> <i>Hello World!</i></h1>
+		<h2 style="color:LightCoral">My first web page</h2>
+		<div align="center">
+			<img src="off.png" style="width:80px;" id="blub" />
+			<button onclick="check_status()">Switch ON/OFF</button>
+			<input type="hidden" id="status" value="0" />
+		</div>
+		<script>
+			function check_status(){
+				if(document.getElementById('status').value==0){
+					status_on();
+					document.getElementById('status').value=1;
+				}else{
+					status_of();
+					document.getElementById('status').value=0;
+				}
+			}
+			function status_on(){
+				document.getElementById('blub').src='on.png';
+			}
+			function status_of(){
+				document.getElementById('blub').src='off.png';
+			}
+
+		</script>
+	</body>
+</html>
